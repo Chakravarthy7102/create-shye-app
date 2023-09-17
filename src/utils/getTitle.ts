@@ -1,6 +1,6 @@
 import gradient from "gradient-string";
 
-import { TITLE_TEXT, SUB_TITLE } from "./contants";
+import { TITLE_TEXT, SUB_TITLE } from "../contants";
 
 const poimandresTheme = {
   blue: "#add7ff",
