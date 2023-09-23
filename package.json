@@ -1,23 +1,43 @@
 {
   "name": "use-shy-app",
   "version": "1.0.0",
-  "description": "This is cli utility to bootstrap and run your own shye instance by youself",
-  "main": "index.js",
+  "description": "This is a cli utility to bootstrap and run your own shye cloned instance.",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup",
+    "dev:bun": "rm -rf shye && bun run ./src/index.ts",
+    "dev":"tsup --watch"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "exports":"./dist/index.js",
+  "type": "module",
   "keywords": [],
-  "author": "",
+  "author": "Chakravarthi Medicharla",
   "license": "ISC",
+  "tsup": {
+    "entry": ["src/index.ts"],
+    "splitting": false,
+    "sourcemap": true,
+    "clean": true
+  },
   "dependencies": {
     "@clack/prompts": "^0.7.0",
     "chalk": "^5.3.0",
     "gradient-string": "^2.0.2",
     "ora": "^7.0.1"
   },
+  "engines": {
+    "node": ">=14.16"
+  },
   "devDependencies": {
     "@types/gradient-string": "^1.1.2",
     "@types/node": "^20.6.2",
+    "tsup": "^7.2.0",
     "typescript": "^5.2.2"
   }
 }

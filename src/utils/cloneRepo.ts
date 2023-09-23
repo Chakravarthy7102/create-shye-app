@@ -21,6 +21,7 @@ export function cloneRepo() {
 
   try {
     execSync("git clone git@github.com:Chakravarthy7102/shye.git");
+    execSync("cd shye && rm -rf .git")
     spinner.succeed("repo cloned")
   } catch (error) {
     spinner.fail(String(error))

@@ -4,7 +4,7 @@ import { cloneRepo } from "./utils/cloneRepo";
 import { renderTitle } from "./utils/getTitle";
 import installDependecies from "./utils/installDependecies";
 
-const main = async () => {
+export const main = async () => {
   renderTitle();
   //ask for a specified package manager and install with it by default use bun.
   cloneRepo();
