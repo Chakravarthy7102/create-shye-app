@@ -1,4 +1,4 @@
-# use-shye-app
+# create-shye-app
 CLI app for shye 
 
 ### usage
