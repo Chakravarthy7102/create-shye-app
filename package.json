@@ -1,13 +1,14 @@
 {
   "name": "use-shy-app",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "This is a cli utility to bootstrap and run your own shye cloned instance.",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsup",
     "dev:bun": "rm -rf shye && bun run ./src/index.ts",
-    "dev":"tsup --watch"
+    "start":"npm run build && rm -rf shye && node ./dist/index.js"
   },
+  "bin":"./dist/index.js",
   "files": [
     "dist",
     "README.md",
