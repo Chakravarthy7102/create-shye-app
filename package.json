@@ -1,6 +1,6 @@
 {
   "name": "create-shy-app",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "This is a cli utility to bootstrap and run your own shye cloned instance.",
   "main": "dist/index.js",
   "scripts": {
